@@ -1,15 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontak</title>
+    <title>Daftar Kontak</title>
+    <style>
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin: 20px 0;
+      }
+
+      th,
+      td {
+        border: 1px solid #dddddd;
+        text-align: left;
+        padding: 10px;
+      }
+
+      th {
+        background-color: #4caf50;
+        color: white;
+      }
+
+      tr:nth-child(even) {
+        background-color: #f2f2f2;
+      }
+
+      .social-links {
+        display: flex;
+      }
+
+      .social-link {
+        margin-right: 10px;
+      }
+    </style>
   </head>
   <body>
-    <h1>Kontak Kami</h1>
-    <p>Silahkan hubungi ke <a href="mailto:nbayu6519@gmail.com">kirim 
-      email</a>
-    </p>
-    </form>
+    <h1 style="text-align: center">Daftar Kontak</h1>
+
+    <table>
+      <tr>
+        <th>Nama</th>
+        <th>No Telepon</th>
+        <th>Email</th>
+        <th>Instagram</th>
+      </tr>
+      <tr>
+        <td>Bayu Wind</td>
+        <td>0896********</td>
+        <td>nbayu6520@gmail.com</td>
+        <td>
+          <a class="social-link" href="https://www.instagram.com/bayun_23/"
+            >@bayun_23</a
+          >
+        </td>
+      </tr>
+    </table>
   </body>
 </html>
