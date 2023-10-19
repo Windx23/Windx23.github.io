@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontak</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: cornsilk;
+      }
+
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: auto;
+      }
+
+      .contact-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .form-input {
+        padding: 10px;
+        width: 100%;
+        font-size: 14px;
+      }
+
+      .form-button {
+        padding: 10px 20px;
+        background-color: #4caf50;
+        color: white;
+        border: none;
+        cursor: pointer;
+        font-size: 14px;
+      }
+
+      .form-button:hover {
+        background-color: #45a049;
+      }
+
+      .footer {
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      .footer-link {
+        margin: 0 10px;
+        color: #333;
+        text-decoration: none;
+      }
+
+      .footer-link:hover {
+        color: #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Kontak saya</h1>
+      <form
+        class="contact-form"
+        action="mailto:nbayu6519@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <input
+          class="form-input"
+          type="text"
+          name="name"
+          placeholder="Nama Anda"
+          required
+        />
+        <input
+          class="form-input"
+          type="email"
+          name="email"
+          placeholder="Email Anda"
+          required
+        />
+        <textarea
+          class="form-input"
+          name="message"
+          rows="5"
+          placeholder="Pesan Anda"
+          required
+        ></textarea>
+        <button class="form-button" type="submit">Kirim Pesan</button>
+      </form>
+    </div>
+    <div class="footer">
+      <a
+        href="https://www.instagram.com/bayun_23/"
+        class="footer-link"
+        target="_blank"
+        >Instagram</a
+      >
+      <a
+        href="https://web.facebook.com/sumi.yem.146/"
+        class="footer-link"
+        target="_blank"
+        >Facebook</a
+      >
+    </div>
+  </body>
+</html>
