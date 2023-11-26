@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Sederhana</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #deb887;
+        text-align: center;
+        margin: 10px;
+        padding: 30px;
+      }
+
+      .kalkulator {
+        background-color: #deb887;
+        width: 550px;
+        margin: 100px auto;
+        padding: 50px;
+        border-radius: 50px;
+        background: linear-gradient(145deg, #c8a67a, #eec590);
+        box-shadow: 5px 5px 20px #7a654a, -5px -5px 20px #ffffc4;
+      }
+
+      .judul {
+        color: red;
+        text-shadow: 3px 3px 3px black;
+      }
+
+      .pesan {
+        color: #8b4513;
+        margin-bottom: 18px;
+      }
+
+      input[type="number"] {
+        width: 30%;
+        padding: 15px;
+        margin-bottom: 15px;
+        font-size: 18px;
+      }
+
+      select {
+        width: 25%;
+        padding: 15px;
+        margin-bottom: 15px;
+        font-size: 16px;
+      }
+
+      button {
+        width: 25%;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 25px;
+        transition: background-color 0.5s ease-in-out;
+      }
+
+      button:hover {
+        background-color: darkorange;
+      }
+
+      .hasil {
+        margin-top: 15px;
+        font-size: 26px;
+        font-weight: bold;
+        color: rgb(241, 21, 212);
+      }
+
+      .creator {
+        color: black;
+        margin-top: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="kalkulator">
+      <h1 class="judul">Kalkulator</h1>
+      <div class="pesan">Selamat Mencoba</div>
+      <input type="number" id="nilai1" placeholder="Nilai I" />
+      <select id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="^">^</option>
+      </select>
+      <input type="number" id="nilai2" placeholder="Nilai II" />
+      <button class="Btn" id="hitung">Submit</button>
+      <div id="hasil" class="hasil"></div>
+    </div>
+    <div class="creator">Created by Bayu</div>
+    <script>
+      document.getElementById("hitung").addEventListener("click", function () {
+        var nilai1 = parseFloat(document.getElementById("nilai1").value);
+        var nilai2 = parseFloat(document.getElementById("nilai2").value);
+        var operator = document.getElementById("operator").value;
+        var hasil = 0;
+
+        switch (operator) {
+          case "+":
+            hasil = nilai1 + nilai2;
+            break;
+          case "-":
+            hasil = nilai1 - nilai2;
+            break;
+          case "*":
+            hasil = nilai1 * nilai2;
+            break;
+          case "/":
+            hasil = nilai1 / nilai2;
+            break;
+          case "^":
+            hasil = Math.pow(nilai1, nilai2);
+            break;
+          default:
+            break;
+        }
+
+        document.getElementById("hasil").innerHTML = "Hasil: " + hasil;
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menghitung Luas Trapesium</title>
+    <style>
+      .header {
+        padding-left: 7em;
+        margin-bottom: 0.5em;
+      }
+      .wrapper {
+        padding-right: 50px;
+        padding-left: 20px;
+        display: flex;
+        align-items: center;
+        margin-bottom: 1em;
+      }
+      .wrapper label {
+        width: 150px;
+      }
+      input {
+        padding: 7px;
+        margin: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 class="header"><u>Menghitung Luas Trapesium</u></h2>
+
+    <h4><u>Diketahui :</u></h4>
+    <div class="wrapper">
+      <label for="atas">Garis Atas :</label>
+      <input id="atas" type="number" />Cm
+    </div>
+    <div class="wrapper">
+      <label for="bawah">Garis Bawah :</label>
+      <input id="bawah" type="number" /> Cm
+    </div>
+    <div class="wrapper">
+      <label for="tinggi">Tinggi :</label>
+      <input id="tinggi" type="number" /> Cm
+    </div>
+    <button onclick="hitungLuas()">Hitung Luas</button>
+    <h4><u>Maka :</u></h4>
+
+    <p id="luas"></p>
+
+    <script>
+      function hitungLuas() {
+        var atas = document.getElementById("atas").value;
+        var bawah = document.getElementById("bawah").value;
+        var tinggi = document.getElementById("tinggi").value;
+        var luas = ((parseInt(atas) + parseInt(bawah)) / 2) * parseInt(tinggi);
+        document.getElementById("luas").innerHTML =
+          "Luas Trapesium: " + luas + " cm²";
+      }
+    </script>
+  </body>
+</html>
